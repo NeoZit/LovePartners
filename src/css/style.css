@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Averta";
+  font-display: swap;
+  src: url("../fonts/Averta-Cyrillic-Bold.woff2") format("woff2"), url("../fonts/Averta-Cyrillic-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averta";
+  font-display: swap;
+  src: url("../fonts/Averta-Cyrillic-Light.woff2") format("woff2"), url("../fonts/Averta-Cyrillic-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averta";
+  font-display: swap;
+  src: url("../fonts/Averta-Cyrillic-Regular.woff2") format("woff2"), url("../fonts/Averta-Cyrillic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averta";
+  font-display: swap;
+  src: url("../fonts/Averta-Cyrillic-SemiBold.woff2") format("woff2"), url("../fonts/Averta-Cyrillic-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Averta";
+  font-size: 1.8rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Averta";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 128rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.btn-register__button {
+  font-weight: 600;
+  line-height: 122.2222222222%;
+  letter-spacing: 0.03em;
+  color: #ff3471;
+  background-image: radial-gradient(78.62% 100.95% at 71.12% 52.82%, #39058b 5%, #270261 42%, #0f0335 100%);
+  border-radius: 4rem;
+  padding: 1.9rem 3.4rem;
+}
+.btn-register__button:active {
+  color: #fff;
+}
+.btn-register__button::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  min-height: 100rem;
+  background: url("@img/header/bg.png") no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.header__top-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+}
+.header__top-user-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__top-login {
+  line-height: 128.5714285714%;
+  color: #ffffff;
+}
+.header__top-language {
+  font-size: 1.6rem;
+  line-height: 87.5%;
+  color: #ffffff;
+}
+.header__body-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__subtitle {
+  font-size: 2.4rem;
+  line-height: 145.8333333333%;
+  letter-spacing: 0.03em;
+  color: #626cff;
+  margin-bottom: 1.5rem;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 4.2rem;
+  line-height: 128.5714285714%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5.2rem;
+}
+.header__word {
+  color: #ff3471;
+}
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__btn {
+  font-weight: 600;
+  line-height: 122.2222222222%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: #ff3471;
+  border-radius: 40px;
+}
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*//*# sourceMappingURL=style.css.map */

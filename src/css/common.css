@@ -1,0 +1,19 @@
+.btn-register__button {
+  font-weight: 600;
+  line-height: percent(22, 18);
+  letter-spacing: 0.03em;
+  color: #ff3471;
+  background-image: radial-gradient(78.62% 100.95% at 71.12% 52.82%, #39058b 5%, #270261 42%, #0f0335 100%);
+  border-radius: rem(40);
+  padding: rem(19) rem(34);
+}
+.btn-register__button:active {
+  color: #fff;
+}
+.btn-register__button::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF3471));
+  background-image: linear-gradient(#FF3471);
+}/*# sourceMappingURL=common.css.map */

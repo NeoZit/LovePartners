@@ -1,0 +1,28 @@
+// Заголовки, общие БЄМ блоки и проче...
+.btn-register {
+  font-weight: 600;
+  line-height: percent(22, 18);
+  letter-spacing: 0.03em;
+  color: #ff3471;
+  border-radius: rem(40);
+  padding: rem(19) rem(34);
+  border: 1px solid #fff;
+  &:active {
+    color: #fff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 20px;
+    height: 20px;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+  }
+}
