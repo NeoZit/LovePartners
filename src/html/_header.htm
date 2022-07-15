@@ -3,7 +3,10 @@
     <div class="header__container">
       <div class="header__top-inner">
         <a href="#" class="header__top-logo-box">
-          <img src="@img/header/logo.svg" alt="logo" class="header__top-logo logo" />
+          <picture>
+            <source srcset="@img/header/mobile-logo.svg" type="" media="(max-width:375px)" />
+            <img src="@img/header/logo.svg" alt="logo" class="header__top-logo logo" />
+          </picture>
         </a>
         <div class="header__top-user-box user-box">
           <button class="header__top-login">Вход</button>

@@ -7,8 +7,16 @@
   border-radius: rem(40);
   padding: rem(19) rem(34);
   border: 1px solid #fff;
-  &:active {
+  cursor: pointer;
+
+  &:active,
+  &:hover {
     color: #fff;
+  }
+  @media only screen and (max-width: em(500)) {
+    font-size: rem(15);
+    line-height: percent(18, 15);
+    padding: rem(16) rem(20);
   }
 }
 
