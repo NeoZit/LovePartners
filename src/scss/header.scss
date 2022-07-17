@@ -185,7 +185,9 @@
   &__btn--main {
     padding: rem(19) rem(27);
     white-space: nowrap;
-    &:active {
+    cursor: pointer;
+    &:active,
+    &:hover {
       background: linear-gradient(106.91deg, #ff3471 5.79%, #710ba0 93.86%);
     }
     @media only screen and (max-width: em(600)) {
@@ -223,6 +225,7 @@
       position: absolute;
       top: -140%;
       left: -60%;
+      pointer-events: none;
     }
     @media only screen and (max-width: em(768)) {
       &:before {

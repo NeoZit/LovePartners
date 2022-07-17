@@ -4,7 +4,34 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page"></main>
+      <main class="page">
+        <section class="features">
+          <div class="features__container">
+            <div class="features__inner">
+              <div class="features__item features__item--top">
+                <div class="features__image-box">
+                  <picture>
+                    <source srcset="@img/features/mobile-item-1.png" type="" media="(max-width:600px)" />
+                    <img src="@img/features/item-1.png" alt="" class="features__img" />
+                  </picture>
+                </div>
+                <div class="features__name">ВЫСОКИЙ КОНВЕРТ</div>
+                <p class="features__text">Собстственный эксклюзивный продуманный сайт знакомств</p>
+              </div>
+              <div class="features__item features__item--bottom">
+                <div class="features__image-box">
+                  <picture>
+                    <source srcset="@img/features/mobile-item-2.png" type="" media="(max-width:600px)" />
+                    <img src="@img/features/item-2.png" alt="" class="features__img" />
+                  </picture>
+                </div>
+                <div class="features__name">МАКСИМАЛЬНЫЕ СТАВКИ</div>
+                <p class="features__text">Когда качество трафика растет, регулярно поднимаем ставку</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       @@include('html/_footer.htm',{})
     </div>
     @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
