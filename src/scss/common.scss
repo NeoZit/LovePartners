@@ -34,3 +34,23 @@
     height: 20px;
   }
 }
+
+.btn-payments {
+  // .btn-payments__name
+
+  &__name {
+    line-height: percent(30, 18);
+    text-align: center;
+    color: #ffffff;
+  }
+
+  // .btn-payments__text
+
+  &__text {
+    font-weight: 700;
+    font-size: rem(48);
+    line-height: percent(57, 48);
+    text-align: center;
+    color: #ff3471;
+  }
+}

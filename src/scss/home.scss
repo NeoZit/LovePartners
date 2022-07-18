@@ -1,4 +1,8 @@
 //====================================================================================================
+//////////////////////////////////////////////////////
+// FEATURES
+//////////////////////////////////////////////////////
+
 .features {
   // .features__container
 
@@ -110,7 +114,85 @@
     }
   }
 }
-.feautures {
+
+//////////////////////////////////////////////////////
+// PAYMENTS
+//////////////////////////////////////////////////////
+
+.payments {
+  background: #2d036a;
+  padding: rem(80) 0 rem(104);
+  margin-bottom: rem(500);
+  // .payments__container
+
+  &__container {
+  }
+
+  // .payments__inner
+
+  &__inner {
+    display: flex;
+    gap: rem(30);
+    @media only screen and (max-width: em(1050)) {
+      flex-direction: column;
+    }
+  }
+
+  // .payments__body
+
+  &__body {
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  // .payments__title
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(42);
+    line-height: percent(61, 42);
+    color: #fefefe;
+    text-transform: uppercase;
+    margin-bottom: rem(11);
+  }
+
+  // .payments__subtitle
+
+  &__subtitle {
+    font-size: rem(24);
+    line-height: percent(19, 24);
+    color: #ffffff;
+    margin-bottom: rem(43);
+  }
+
+  // .payments__btn
+
+  &__btn {
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: rem(20) rem(0) rem(25);
+  }
+
+  // .payments__image
+
+  &__image {
+    position: relative;
+    flex: 1 0 auto;
+  }
+
+  // .payments__img
+
+  &__img {
+    position: absolute;
+    bottom: -123%;
+    right: 0;
+    object-fit: cover;
+    @media only screen and (max-width: em(1250)) {
+      bottom: -50%;
+      width: 100%;
+      height: 175%;
+    }
+  }
 }
 
 //====================================================================================================
