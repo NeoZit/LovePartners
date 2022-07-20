@@ -122,7 +122,6 @@
 .payments {
   background: #2d036a;
   padding: rem(80) 0 rem(104);
-  margin-bottom: rem(500);
   // .payments__container
 
   &__container {
@@ -135,6 +134,7 @@
     gap: rem(30);
     @media only screen and (max-width: em(1050)) {
       flex-direction: column;
+      gap: rem(77);
     }
   }
 
@@ -149,20 +149,20 @@
 
   &__title {
     font-weight: 700;
-    font-size: rem(42);
-    line-height: percent(61, 42);
     color: #fefefe;
     text-transform: uppercase;
-    margin-bottom: rem(11);
+    @include adaptiveValue('font-size', 42, 36, 1280, 375, 1);
+    @include adaptiveValue('line-height', 61, 46, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 11, 25, 1280, 375, 1);
   }
 
   // .payments__subtitle
 
   &__subtitle {
-    font-size: rem(24);
-    line-height: percent(19, 24);
     color: #ffffff;
-    margin-bottom: rem(43);
+    @include adaptiveValue('font-size', 24, 19, 1280, 375, 1);
+    @include adaptiveValue('line-height', 19, 16, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 43, 25, 1280, 375, 1);
   }
 
   // .payments__btn
@@ -171,6 +171,9 @@
     border: 1px solid #ffffff;
     border-radius: 20px;
     padding: rem(20) rem(0) rem(25);
+    @media only screen and (max-width: em(600)) {
+      padding: rem(17) rem(0) rem(21);
+    }
   }
 
   // .payments__image
@@ -191,6 +194,16 @@
       bottom: -50%;
       width: 100%;
       height: 175%;
+    }
+    @media only screen and (max-width: em(1050)) {
+      position: static;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto -135px;
+    }
+    @media only screen and (max-width: em(1050)) {
+      width: 100%;
     }
   }
 }

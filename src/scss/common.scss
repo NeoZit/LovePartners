@@ -39,17 +39,19 @@
   // .btn-payments__name
 
   &__name {
-    line-height: percent(30, 18);
     text-align: center;
     color: #ffffff;
+    @include adaptiveValue('line-height', 30, 25, 1280, 375, 1);
+    @include adaptiveValue('font-size', 18, 15, 1280, 375, 1);
   }
 
   // .btn-payments__text
 
   &__text {
     font-weight: 700;
-    font-size: rem(48);
-    line-height: percent(57, 48);
+    @include adaptiveValue('font-size', 48, 41, 1280, 375, 1);
+    @include adaptiveValue('line-height', 57, 48, 1280, 375, 1);
+
     text-align: center;
     color: #ff3471;
   }
