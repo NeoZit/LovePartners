@@ -120,11 +120,42 @@
 //////////////////////////////////////////////////////
 
 .payments {
-  background: #2d036a;
+  background: #2d036a url('@img/payments/pink-circle.svg') bottom center no-repeat;
   padding: rem(80) 0 rem(104);
+  position: relative;
+  @media only screen and (max-width: em(1050)) {
+    background: #2d036a;
+  }
+
   // .payments__container
 
   &__container {
+    &::after {
+      content: '';
+      position: absolute;
+      top: rem(-300);
+      right: rem(-200);
+      background: url('@img/circle.svg') no-repeat;
+      z-index: -1;
+      width: rem(1357);
+      height: rem(1274);
+    }
+    @media only screen and (max-width: em(1350)) {
+      &::after {
+        top: rem(-150);
+        right: rem(0);
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width: em(425)) {
+      &::after {
+        top: 23rem;
+        right: -120%;
+        background: url(../img/mobile-circle.svg) no-repeat;
+        width: 794.53px;
+        height: 746.25px;
+      }
+    }
   }
 
   // .payments__inner
@@ -187,7 +218,7 @@
 
   &__img {
     position: absolute;
-    bottom: -123%;
+    bottom: -61%;
     right: 0;
     object-fit: cover;
     @media only screen and (max-width: em(1250)) {
@@ -205,6 +236,77 @@
     @media only screen and (max-width: em(1050)) {
       width: 100%;
     }
+  }
+}
+
+//////////////////////////////////////////////////////
+// METHODS
+//////////////////////////////////////////////////////
+
+.methods {
+  // .methods__container
+
+  &__container {
+  }
+
+  // .methods__title
+
+  &__title {
+  }
+
+  // .methods__partners
+
+  &__partners {
+  }
+
+  // .methods__inner
+
+  &__inner {
+  }
+
+  // .methods__content
+
+  &__content {
+  }
+
+  // .methods__name
+
+  &__name {
+  }
+
+  // .methods__condition
+
+  &__condition {
+  }
+
+  // .methods__condition-check
+
+  &__condition-check {
+  }
+
+  // .methods__condition-text
+
+  &__condition-text {
+  }
+
+  // .methods__text
+
+  &__text {
+  }
+
+  // .methods__btn
+
+  &__btn {
+  }
+
+  // .methods__images
+
+  &__images {
+  }
+
+  // .methods__img
+
+  &__img {
   }
 }
 
