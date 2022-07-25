@@ -58,6 +58,16 @@
 }
 
 .partners {
+  display: flex;
+  gap: rem(30);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(90);
+  flex-wrap: wrap;
+  @media only screen and (max-width: em(768)) {
+    flex-direction: column;
+  }
+
   // .partners__item
 
   &__item {
@@ -66,5 +76,6 @@
   // .partners__img
 
   &__img {
+    filter: grayscale(1);
   }
 }

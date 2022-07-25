@@ -244,6 +244,10 @@
 //////////////////////////////////////////////////////
 
 .methods {
+  padding: rem(146) rem(0) rem(96);
+  @media only screen and (max-width: em(768)) {
+    padding: rem(127) rem(0) rem(52);
+  }
   // .methods__container
 
   &__container {
@@ -252,6 +256,16 @@
   // .methods__title
 
   &__title {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #757575;
+    @include adaptiveValue('font-size', 42, 36, 1280, 375, 1);
+    @include adaptiveValue('line-height', 30, 46, 1280, 375, 1);
+    margin-bottom: rem(30);
+    @media only screen and (max-width: em(768)) {
+      text-align: center;
+    }
   }
 
   // .methods__partners
@@ -262,51 +276,122 @@
   // .methods__inner
 
   &__inner {
+    display: flex;
+    gap: rem(30);
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: em(768)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   // .methods__content
 
   &__content {
+    @media only screen and (max-width: em(1050)) {
+      flex: 1 0 70%;
+    }
+    @media only screen and (max-width: em(768)) {
+      align-self: center;
+      text-align: center;
+    }
   }
 
   // .methods__name
 
   &__name {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2d036a;
+    @include adaptiveValue('line-height', 35, 46, 1280, 375, 1);
+    @include adaptiveValue('font-size', 42, 36, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 48, 30, 1280, 375, 1);
   }
 
   // .methods__condition
 
   &__condition {
-  }
-
-  // .methods__condition-check
-
-  &__condition-check {
-  }
-
-  // .methods__condition-text
-
-  &__condition-text {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #2d036a;
+    @include adaptiveValue('line-height', 19, 16, 1280, 375, 1);
+    @include adaptiveValue('font-size', 26, 21, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 28, 25, 1280, 375, 1);
+    padding-left: rem(57);
+    position: relative;
+    @media only screen and (max-width: em(768)) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: rem(0);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('@img/methods/check.png') no-repeat;
+      width: rem(37);
+      height: rem(30);
+      @media only screen and (max-width: em(768)) {
+        position: relative;
+        background: url('@img/methods/check-mobile.png') no-repeat;
+        display: inline-block;
+        margin-right: rem(17);
+      }
+    }
   }
 
   // .methods__text
 
   &__text {
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: #5d5a63;
+    @include adaptiveValue('line-height', 22, 18, 1280, 375, 1);
+    @include adaptiveValue('font-size', 18, 15, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 48, 51, 1280, 375, 1);
+    max-width: rem(600);
   }
 
   // .methods__btn
 
   &__btn {
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    @include adaptiveValue('font-size', 18, 16, 1280, 375, 1);
+    @include adaptiveValue('line-height', 22, 18, 1280, 375, 1);
+    background: #ff3471;
+    border-radius: 40px;
+    padding: rem(19);
+    display: inline-block;
+    @media only screen and (max-width: em(768)) {
+      align-self: center;
+    }
   }
 
   // .methods__images
 
   &__images {
+    @media only screen and (max-width: em(768)) {
+      align-self: center;
+      margin-bottom: rem(52);
+    }
   }
 
   // .methods__img
 
   &__img {
+    @media only screen and (max-width: em(1050)) {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
