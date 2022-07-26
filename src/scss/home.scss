@@ -395,4 +395,51 @@
   }
 }
 
+//////////////////////////////////////////////////////
+// ADMIN-PANEL
+//////////////////////////////////////////////////////
+
+.admin-panel {
+  background: url('@img/admin-panel.jpg') center/cover no-repeat;
+  min-height: rem(1039);
+  padding: rem(88) rem(0);
+  @media only screen and (max-width: em(375)) {
+    background: url('@img/admin-panel-mobile.jpg') center/cover no-repeat;
+    min-height: rem(778);
+    padding: rem(40) rem(0);
+  }
+
+  // .admin-panel__container
+
+  &__container {
+  }
+
+  // .admin-panel__inner
+
+  &__inner {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    @media only screen and (max-width: em(768)) {
+      text-align: center;
+    }
+  }
+
+  // .admin-panel__title
+
+  &__title {
+    @include adaptiveValue('font-size', 69, 44, 1280, 375, 1);
+    @include adaptiveValue('line-height', 58, 48, 1280, 375, 1);
+    @include adaptiveValue('margin-bottom', 21, 7, 1280, 375, 1);
+  }
+
+  // .admin-panel__subtitle
+
+  &__subtitle {
+    @include adaptiveValue('font-size', 32, 26, 1280, 375, 1);
+    @include adaptiveValue('line-height', 24, 20, 1280, 375, 1);
+  }
+}
+
 //====================================================================================================

@@ -1,3 +1,136 @@
 //====================================================================================================
+.footer {
+  background: #2d036a;
+  padding: rem(90) rem(0);
+  @media only screen and (max-width: em(768)) {
+    padding: rem(30) rem(0);
+  }
+
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    gap: rem(30);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and (max-width: em(768)) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: rem(23);
+    }
+  }
+
+  // .footer__item
+
+  &__item {
+  }
+
+  // .footer__item--social
+
+  &__item--social {
+    @media only screen and (max-width: em(768)) {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(30);
+    }
+    @media only screen and (max-width: em(425)) {
+      width: 100%;
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+  }
+
+  // .footer__copy
+
+  &__copy {
+    color: #9798a5;
+    @include adaptiveValue('font-size', 14, 10, 1280, 375, 1);
+    @include adaptiveValue('line-height', 11, 10, 1280, 375, 1);
+    display: flex;
+    gap: rem(7);
+    align-items: center;
+
+    &::before {
+      content: '';
+      background-image: url('@img/footer/copy.png');
+      width: rem(16);
+      height: rem(16);
+    }
+    @media only screen and (max-width: em(768)) {
+      margin-top: rem(-7);
+    }
+  }
+
+  // .footer__text
+
+  &__text {
+    @include adaptiveValue('font-size', 26, 22, 1280, 375, 1);
+    @include adaptiveValue('line-height', 40, 28, 1280, 375, 1);
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  // .footer__social
+
+  &__social {
+    @include adaptiveValue('font-size', 18, 14, 1280, 375, 1);
+    @include adaptiveValue('line-height', 36, 30, 1280, 375, 1);
+    font-size: 18px;
+    line-height: 36px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    @media only screen and (max-width: em(768)) {
+      gap: rem(7);
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+    }
+  }
+
+  // .footer__social--telegram
+
+  &__social--telegram {
+    &::before {
+      background-image: url('@img/footer/telegram.svg');
+      width: rem(20);
+      height: rem(19);
+      @media only screen and (max-width: em(768)) {
+        width: rem(16);
+        height: rem(14);
+        background-image: url('@img/footer/telegram-mobile.svg');
+      }
+    }
+  }
+
+  // .footer__social--mail
+
+  &__social--mail {
+    &::before {
+      background-image: url('@img/footer/mail.svg');
+      width: rem(23);
+      height: rem(16);
+      @media only screen and (max-width: em(768)) {
+        width: rem(17);
+        height: rem(11);
+        background-image: url('@img/footer/mail-mobile.svg');
+      }
+    }
+  }
+}
 
 //====================================================================================================
